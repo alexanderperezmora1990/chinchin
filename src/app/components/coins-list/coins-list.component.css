@@ -1,0 +1,17 @@
+::ng-deep .carousel {
+    height: 70px !important;
+}
+
+::ng-deep .carousel-slide {
+    height: 70px !important;
+}
+
+::ng-deep .carousel-list {
+    height: 70px !important;
+}
+
+::ng-deep .carousel-slide-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

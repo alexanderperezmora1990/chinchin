@@ -1,0 +1,73 @@
+<div class="container-fluid p-0 home">
+  <app-nav-bar></app-nav-bar>
+  <div class="row">
+    <div  [ngClass]="{'col-3': sharedService.completeMenu , 'col-1': !sharedService.completeMenu }">
+      <app-side-bar></app-side-bar>
+    </div>
+    <div class="col">
+      <div class="container px-5 pt-5">
+        
+        <div class="row">
+          <h2>
+            Mis billeteras o cuentas
+          </h2>
+        </div>
+
+        <div class="row box my-4">
+          <div class="col-7">
+            <div class="row">
+              <h3>
+                ¡Recibe tus pagos chin chin!
+              </h3>
+            </div>
+            <div class="row">
+              <p>
+                con el punto de venta multimoneda pódras ofrecerle comodidad a tus clientes para pagar de la manera rápida y segura.
+              </p>
+            </div>
+            <div class="row">
+              <button type="button" class="btn btn-success mx-auto">Punto de Venta</button>
+            </div>
+          </div>
+          <div class="col-5">
+            <img src="../../../assets/images/gestionar-dispositivo.svg"  width="215px" alt="">
+          </div>  
+        </div>
+
+
+        <div class="row mb-4">
+           
+              <app-card class="col-4 mt-4" [card]="card" *ngFor="let card of listaCard"></app-card>
+
+        </div>
+
+        <div class="row box my-5">
+          <div class="col-12 text-center">
+            <img src="../../../assets/images/empty-state.png"  width="400px" alt="">
+          </div>
+          <div class="col-12 text-center mt-4">
+            <h3 style="color: #a1a9b5!important;">Comience a realizar sus primeras transacciones</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <hr>
+          </div>
+          <div class="col-12 text-center">
+            <p class="mb-2">
+              Soluciones Financieras Chinchin, C. A.
+            </p>
+          </div>
+          <div class="col-12 text-center">
+            <p style="color: #5ec7a4;"> 
+              R.I.F. J-413198282
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+

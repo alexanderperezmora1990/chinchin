@@ -1,0 +1,22 @@
+<nav ngxNavbarDynamicExpand class="navbar-light py-3 px-4 content-boxes">
+    <img src="https://www.pagochinchin.com/img/chinchin-logo.svg" alt="">
+  
+
+    <ul class="navbar-nav mr-auto">
+      <li class=" ml-3 nav-item cursor-pointer ">
+          <img  src="../../../../assets/images/menu.svg" alt="" (click)="sharedService.completeMenu = !sharedService.completeMenu">
+      </li>
+    </ul>
+   
+
+    <div class="avatar">
+        <li class="ml-2 cursor-pointer">
+            <span (click)="hideLogOut = !hideLogOut">
+                {{name}} <img  src="../../../../assets/images/arrow.svg" style="width: 0.7em;" alt="">
+            </span> 
+            <div *ngIf="!hideLogOut" (click)="logOut()" class="mt-2 animated fadeIn">
+                <span class="font-weight-bold cursor-pointer">Cerrar Sesión</span>
+            </div>
+        </li>
+    </div>
+  </nav>

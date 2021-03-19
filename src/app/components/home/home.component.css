@@ -1,0 +1,13 @@
+.home {
+    background-color: #f1f4f8;
+}
+
+.box {
+    background: white;
+    border-radius: 10px;
+    padding: 50px;
+}
+
+app-card {
+    width: 100%;
+}

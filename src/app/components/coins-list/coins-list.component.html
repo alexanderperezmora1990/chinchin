@@ -1,0 +1,48 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <mat-carousel
+                timings="250ms ease-in"
+                [autoplay]="true"
+                interval="10000"
+                color="accent"
+                maxWidth="auto"
+                proportion="25"
+                slides="5"
+                [loop]="true"
+                [hideArrows]="true"
+                [hideIndicators]="true"
+                [useKeyboard]="true"
+                [useMouseWheel]="false"
+                [slideHeight]="'50px'"
+                orientation="rtl"
+            >
+            <mat-carousel-slide
+                #matCarouselSlide
+                *ngFor="let coin of listCoins; let i = index"
+                overlayColor="#ffff"
+                [hideOverlay]="false"
+            >
+                <div class="conatiner">
+                    <div class="row py-3">
+                        <div class="col-12 text-center">
+                            <i *ngIf="coin.symbol === 'BTCUSDC'" class="fa fa-btc" aria-hidden="true"></i> 
+                            <i *ngIf="coin.symbol === 'EURBUSD'" class="fa fa-eur" aria-hidden="true"></i> 
+                            <span *ngIf="coin.symbol === 'BS'" class="font-weight-bold">BsF</span>
+                            <span *ngIf="coin.symbol === 'PTR'" class="font-weight-bold">PTR</span>
+                            <span *ngIf="coin.symbol === 'DASHBUSD'" class="font-weight-bold">DASH</span>
+                            <span *ngIf="coin.symbol === 'ETHUSDC'" class="font-weight-bold">ETH</span>
+                            
+                            {{coin | nameCoin}}
+                        </div>
+                        <div class="col-12 text-center mt-1">
+                           <span class="font-weight-bold">precio:</span>  {{ coin.price | number : '1.2-2'}}$
+                        </div>
+                    </div>
+                </div>
+            </mat-carousel-slide>
+        </mat-carousel>
+        </div>
+    </div>
+</div>

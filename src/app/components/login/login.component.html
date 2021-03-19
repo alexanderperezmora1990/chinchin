@@ -1,0 +1,54 @@
+<div class="limiter">
+    <div class="container-login100 animated fadeInLeft">
+        <div class="wrap-login100 p-t-50 p-b-90">
+            <form class="login100-form validate-form flex-sb flex-w"  [formGroup]="loginForm" (ngSubmit)="login()">
+
+                <span class="login100-form-title p-b-51">
+                    <img src="https://www.pagochinchin.com/img/chinchin-logo.svg" alt="">
+                </span>
+
+                <span *ngIf="loginForm.get('email').touched && loginForm.get('email').errors && loginForm.get('email').errors.required"
+                        class="text-danger animated fadeIn">El correo es obligatorio</span>
+                <span *ngIf="loginForm.get('email').touched && loginForm.get('email').invalid"
+                        class="text-danger animated fadeIn">email no valido</span>
+                <div class="wrap-input100 m-b-16">
+                    <input class="input100" 
+                           type="text" 
+                           name="email" 
+                           placeholder="email@gmail.com"
+                           formControlName="email"
+                    >
+                    <span class="focus-input100"></span>
+                </div>
+                
+                <span *ngIf="loginForm.get('password').touched && loginForm.get('password').errors && loginForm.get('password').errors.required"
+                        class="text-danger animated fadeIn">El password es obligatorio</span>
+                <div class="wrap-input100 m-b-16" data-validate = "Password is required">
+                    <input class="input100"
+                           type="password" 
+                           name="password" 
+                           placeholder="Password"
+                           formControlName="password"
+                    >
+                    <span class="focus-input100"></span>
+                </div>
+                
+                <div class="flex-sb-m w-full p-t-3 p-b-24">
+                    <div>
+                        <a routerLink="/registro" class="txt1" style="cursor: pointer;">
+                            ¿No tienes cuenta?
+                        </a>
+                    </div>
+                </div>
+
+                <div class="container-login100-form-btn m-t-17">
+                    <button class="login100-form-btn" type="submit">
+                        Ingresar
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
